@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.devtimchentw.databindingpractice.entity.BetBean"/>
+        <variable
+            name="betBean"
+            type="com.devtimchentw.databindingpractice.entity.BetBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.DataDetailActivity"
+        tools:ignore="HardcodedText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="投注Id:" />
+
+            <TextView
+                android:text="@{String.valueOf(betBean.betId)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="1283768364" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="下注時間:" />
+
+            <TextView
+                android:text="@{String.valueOf(betBean.betTime)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="2020-10-08 13:05:00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="下注內容:" />
+
+            <TextView
+                android:text="@{String.valueOf(betBean.betContent)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="01, 05, 06" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="開獎內容:" />
+
+            <TextView
+                android:text="@{String.valueOf(betBean.drawContent)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="01, 02, 03" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="下注金額:" />
+
+            <TextView
+                android:text="@{String.valueOf(betBean.betAmount)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="$123.05" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_win_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="輸贏金額:" />
+
+            <TextView
+                android:text="@{String.valueOf(betBean.betWin)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="$123.05" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

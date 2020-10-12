@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.devtimchentw.databindingpractice.entity.UserBean"/>
+        <variable
+            name="userBean"
+            type="com.devtimchentw.databindingpractice.entity.UserBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.BindEditTextActivity">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EditText 測試" />
+
+        <!--    雙向綁定, EditText 的值可以存回 userBean 之中    -->
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="@={userBean.userName}"/>
+
+        <Button
+            android:id="@+id/btn_print_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Print data" />
+
+    </LinearLayout>
+</layout>
